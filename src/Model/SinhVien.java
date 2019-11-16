@@ -4,80 +4,23 @@
  * and open the template in the editor.
  */
 package Model;
-
-import java.io.Serializable;
 import java.util.Date;
 import java.util.StringTokenizer;
-
 /**
  *
  * @author LEGION
  */
-public class SinhVien implements Serializable {
+public class SinhVien {
 
     public SinhVien() {
     }
 
-    public SinhVien(int maSv,String s, Date dob, String address, String sdt, String gioitinh) {
-        this.tenSv = new Name(s);
+    public SinhVien(Name tenSv, int maSv, Date dob, String address, String sdt, String gioitinh) {
+        this.tenSv = tenSv;
         this.maSv = maSv;
         this.dob = dob;
         this.address = address;
         this.sdt = sdt;
-        this.gioitinh = gioitinh;
-    }
-
-    @Override
-    public String toString() {
-        return "SinhVien{" + "tenSv=" + tenSv + ", maSv=" + maSv + ", dob=" + dob + ", address=" + address + ", sdt=" + sdt + ", gioitinh=" + gioitinh + '}';
-    }
-
-    public String getTenSv() {
-        return tenSv.toString();
-    }
-
-    public void setTenSv(String tenSv) {
-        Name a = new Name(tenSv);
-        this.tenSv = a;
-    }
-
-    public int getMaSv() {
-        return maSv;
-    }
-
-    public void setMaSv(int maSv) {
-        this.maSv = maSv;
-    }
-
-    public Date getDob() {
-        return dob;
-    }
-
-    public void setDob(Date dob) {
-        this.dob = dob;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getSdt() {
-        return sdt;
-    }
-
-    public void setSdt(String sdt) {
-        this.sdt = sdt;
-    }
-
-    public String getGioitinh() {
-        return gioitinh;
-    }
-
-    public void setGioitinh(String gioitinh) {
         this.gioitinh = gioitinh;
     }
     private Name tenSv;
@@ -87,29 +30,19 @@ public class SinhVien implements Serializable {
     private String sdt;
     private String gioitinh;
 }
-
-class Name {
+class Name{
 
     public Name() {
     }
 
-    public Name(String s) {
-        StringTokenizer strtok = new StringTokenizer(s);
-        String ho = "";
-        String ten = "";
-        while (strtok.hasMoreTokens()) {
-            String tmp = strtok.nextToken();
-            if (strtok.hasMoreTokens() == false) {
-                ten += tmp;
-            } else {
-                ho += tmp + " ";
-            }
-        }
+    public Name(String ho, String ten, String dem) {
         this.ho = ho;
         this.ten = ten;
+        this.dem = dem;
     }
 
-    private String ho, ten;
+
+    private String ho,ten,dem;
 
     public String getHo() {
         return ho;
@@ -127,9 +60,11 @@ class Name {
         this.ten = ten;
     }
 
-    @Override
-    public String toString() {
-        return ho + ten;
+    public String getDem() {
+        return dem;
     }
 
+    public void setDem(String dem) {
+        this.dem = dem;
+    }
 }
