@@ -5,11 +5,13 @@
  */
 package Model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author LEGION
  */
-public class GiangVien {
+public class GiangVien implements Serializable{
 
     public int getMaGv() {
         return maGv;
@@ -30,9 +32,9 @@ public class GiangVien {
     public GiangVien() {
     }
 
-    public GiangVien(int maGv, Name tenGv, String address, String sdt) {
+    public GiangVien(int maGv, String tenGv, String address, String sdt) {
         this.maGv = maGv;
-        this.tenGv = tenGv;
+        this.tenGv = new Name(tenGv);
         this.address = address;
         this.sdt = sdt;
     }
