@@ -9,6 +9,7 @@ import Model.*;
 import View.*;
 import View.QuanLi.QuanLiFrame;
 import View.SinhVien.SVFrame;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -144,11 +145,12 @@ public class LoginController {
 
             @Override
             public void mousePressed(MouseEvent e) {
+                register.setForeground(Color.RED);
             }
 
             @Override
             public void mouseReleased(MouseEvent e) {
-
+                register.setForeground(null);
             }
 
             @Override
