@@ -47,8 +47,7 @@ public class LoginFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         pswrd = new javax.swing.JPasswordField();
-        LoginBtt = new javax.swing.JButton();
-        registerLabel = new javax.swing.JLabel();
+
         jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -104,16 +103,12 @@ public class LoginFrame extends javax.swing.JFrame {
             }
         });
 
-        LoginBtt.setBackground(new java.awt.Color(58, 54, 54));
-        LoginBtt.setText("SIGN IN");
-        LoginBtt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginBttActionPerformed(evt);
+
             }
         });
-        LoginBtt.addKeyListener(new java.awt.event.KeyAdapter() {
+        jButton1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                LoginBttKeyPressed(evt);
+                jButton1KeyPressed(evt);
             }
         });
 
@@ -128,7 +123,7 @@ public class LoginFrame extends javax.swing.JFrame {
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(usr, javax.swing.GroupLayout.DEFAULT_SIZE, 342, Short.MAX_VALUE)
                     .addComponent(pswrd)
-                    .addComponent(LoginBtt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -143,18 +138,19 @@ public class LoginFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pswrd, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
-                .addComponent(LoginBtt, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(42, Short.MAX_VALUE))
         );
 
-        registerLabel.setBackground(new java.awt.Color(112, 102, 92));
-        registerLabel.setForeground(new java.awt.Color(37, 207, 186));
-        registerLabel.setText("Create new account?");
+        jLabel1.setBackground(new java.awt.Color(112, 102, 92));
+        jLabel1.setForeground(new java.awt.Color(37, 207, 186));
+        jLabel1.setText("Create new account?");
 
         jLabel4.setForeground(new java.awt.Color(37, 207, 186));
         jLabel4.setText("Forgot your password?");
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -202,7 +198,7 @@ public class LoginFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(registerLabel)
+
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel4))
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -216,7 +212,7 @@ public class LoginFrame extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(registerLabel)
+
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -248,16 +244,12 @@ public class LoginFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_pswrdActionPerformed
 
-    private void LoginBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBttActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LoginBttActionPerformed
 
-    private void LoginBttKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LoginBttKeyPressed
         // TODO add your handling code here:
         if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER) {              //press Enter to SIGN IN
             
         }
-    }//GEN-LAST:event_LoginBttKeyPressed
+
 
 
 
@@ -327,7 +319,7 @@ public class LoginFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton LoginBtt;
+
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -337,7 +329,7 @@ public class LoginFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPasswordField pswrd;
-    private javax.swing.JLabel registerLabel;
+
     private javax.swing.JTextField usr;
     // End of variables declaration//GEN-END:variables
 }
